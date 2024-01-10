@@ -1,0 +1,133 @@
+/* import font family*/
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@600;800&display=swap');
+
+/* colors */
+:root {
+  --primary-yellow: hsl(47, 88%, 63%);
+
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-grey: hsl(0, 0%, 50%);
+  --neutral-black: hsl(0, 0%, 7%);
+}
+
+/* global style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Figtree', sans-serif;
+  font-size: 16px;
+}
+
+/* container */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 960px;
+  margin: 0 auto;
+  background: var(--primary-yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .app {
+  width: 385px;
+  height: 525px;
+  border-radius: 15px;
+  background: var(--neutral-white);
+  border: 1px solid var(--neutral-black);
+  box-shadow: 5px 5px 0px 0px var(--neutral-black);
+  padding: 25px;
+  pointer-events: none;
+}
+
+.container .app:hover {
+  box-shadow: 10px 10px 0px 0px var(--neutral-black);
+  transition: all .3s ease-in-out;
+}
+
+.container .app .img {
+  width: 100%;
+  height: 200px;
+  background: url('assets/images/illustration-article.svg');
+  border-radius: 10px;
+}
+
+.container .app .learning {
+  width: 80px;
+  height: 30px;
+  background: var(--primary-yellow);
+  color: var(--neutral-black);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.container .app .published {
+  color: var(--neutral-black);
+  font-size: 14px;
+}
+
+.container .app .link {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 800;
+  display: inline-block;
+  cursor: url('assets/images/mouse-pointer.png'), auto;
+  pointer-events: auto;
+}
+
+.container .app .link:hover {
+  color: var(--primary-yellow);
+  transition: color .3s ease-in-out;
+}
+
+.container .app .content {
+  color: var(--neutral-grey);
+  margin-bottom: 20px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+.container .app .author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.container .app .author .avatar {
+  width: 30px;
+  height: 30px;
+  background: url('assets/images/image-avatar.webp');
+  background-size: cover;
+}
+
+.container .app .author .name {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.attribution {
+  margin: 20px auto;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  font-size: 11px;
+  color: hsl(228, 45%, 44%);
+}
+
+/* responsive */
+@media screen and (max-width: 450px) {
+  .container .app {
+    width: 90%;
+  }
+}
